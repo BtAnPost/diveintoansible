@@ -1,0 +1,16 @@
+# Ansible inventory for Linux and Windows hosts
+
+[linux]
+ubuntu-c ansible_host=ubuntu-c
+ubuntu1 ansible_host=ubuntu1
+centos1 ansible_host=centos1
+
+[windows]
+windows1 ansible_host=windows1
+
+[windows:vars]
+ansible_user=Administrator
+ansible_password=YourPassword
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
+ansible_port=5985

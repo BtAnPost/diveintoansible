@@ -1,0 +1,12 @@
+---
+- name: Test communication with Windows host
+  hosts: windows
+  gather_facts: no
+  tasks:
+    - name: Get Windows hostname
+      ansible.windows.win_hostname:
+      register: win_hostname
+
+    - name: Show Windows hostname
+      debug:
+        var: win_hostname

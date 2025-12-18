@@ -15,6 +15,12 @@ ubuntu[1:3]
 ansible_become=true
 ansible_become_pass=password
 
+[windows]
+windows1 ansible_host=windows1 ansible_port=22 ansible_user=windows ansible_password=password
+
+[windows:vars]
+ansible_connection=ssh
+
 [linux:children]
 centos
 ubuntu
